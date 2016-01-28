@@ -41,11 +41,10 @@ For i = 1 To Sheets.Item(TheTable).UsedRange.Rows.Count   '注意sheet对象，�
     ADSM.writetext "End:VCARD", 1
   End Select
 Next
-ADSM.Position = 3
+ADSM.Position = 3   
 ADSM2.Type = 1
 ADSM2.Open
 ADSM.copyto ADSM2
 ADSM2.savetofile FilePath & FileName & ".vcf", 2   '将adsm2写入到文件
 Debug.Print ("ok")
 End Sub
-
